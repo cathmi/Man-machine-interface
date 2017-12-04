@@ -1,7 +1,31 @@
 % Unzip and save sig files
+d = uigetdir(pwd, 'Select a folder');
+files = dir(fullfile(d, '*.otb'));
+
+no_of_files = size(files);
+test = 1;
+for i = 1:no_of_files
 
 
-[file_name, file_path] = uigetfile('*.otb','Select the Signal file to extract'); 
-OTBfilename = [file_path file_name];
+file_name = files(i).name;
+file_path = [d '\'];
 
-unzip(OTBfilename,'C:\Users\Cathy\Documents\MSc Computer Science\MSc Project - man machine interfaces\Lab software\sandbox\Raw data');
+file_otb = [file_path file_name];
+    
+unzip(file_otb,'C:\Users\Cathy\Documents\MSc Computer Science\MSc Project - man machine interfaces\Lab software\sandbox\Stage_1_otb_recordings');
+
+files1 = dir(fullfile('C:\Users\Cathy\Documents\MSc Computer Science\MSc Project - man machine interfaces\Lab software\sandbox\Stage_1_otb_recordings', '*.sig'));
+
+
+file_rename = [files1(1).folder '\' files1(1).name];
+
+
+rename_to = strcat('C:\Users\Cathy\Documents\MSc Computer Science\MSc Project - man machine interfaces\Lab software\sandbox\Stage_2_Raw data\single_store\5-3-',num2str(test,0),'.sig');
+
+test = test+1;
+movefile(file_rename,rename_to);
+
+
+end
+
+cd ..;
