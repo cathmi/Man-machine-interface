@@ -1,98 +1,32 @@
-%rms, var, wl, mav, zc
 
-
-figure('Name','rms vs var')
-scatter(full_vec1(:,1),full_vec1(:,2),1,'red');
+figure('Name','fig1')
+plot(rms(test2(1:64,:)))
 hold on
-scatter(full_vec2(:,1),full_vec2(:,2),1,'green');
-scatter(full_vec3(:,1),full_vec3(:,2),1,'blue');
-scatter(full_vec4(:,1),full_vec4(:,2),1,'yellow');
-scatter(full_vec5(:,1),full_vec5(:,2),1,'cyan');
-scatter(full_vec6(:,1),full_vec6(:,2),1,'magenta');
+plot(rms(test1(1:64,:)))
+plot(rms(test3(1:64,:)))
+plot(rms(test4(1:64,:)))
+plot(rms(test5(1:64,:)))
 
 
-figure('Name','rms vs wl')
-scatter(full_vec1(:,1),full_vec1(:,3),1,'red');
+figure('Name','fig2')
+plot(rms(test2(65:128,:)))
 hold on
-scatter(full_vec2(:,1),full_vec2(:,3),1,'green');
-scatter(full_vec3(:,1),full_vec3(:,3),1,'blue');
-scatter(full_vec4(:,1),full_vec4(:,3),1,'yellow');
-scatter(full_vec5(:,1),full_vec5(:,3),1,'cyan');
-scatter(full_vec6(:,1),full_vec6(:,3),1,'magenta');
+plot(rms(test1(65:128,:)))
+plot(rms(test3(65:128,:)))
+plot(rms(test4(65:128,:)))
+plot(rms(test5(65:128,:)))
 
-figure('Name','rms vs mav')
-scatter(full_vec1(:,1),full_vec1(:,4),1,'red');
+
+figure('Name','fig3')
+plot(rms(test2(129:192,:)))
 hold on
-scatter(full_vec2(:,1),full_vec2(:,4),1,'green');
-scatter(full_vec3(:,1),full_vec3(:,4),1,'blue');
-scatter(full_vec4(:,1),full_vec4(:,4),1,'yellow');
-scatter(full_vec5(:,1),full_vec5(:,4),1,'cyan');
-scatter(full_vec6(:,1),full_vec6(:,4),1,'magenta');
-
-figure('Name','rms vs zc')
-scatter(full_vec1(:,1),full_vec1(:,5),1,'red');
-hold on
-scatter(full_vec2(:,1),full_vec2(:,5),1,'green');
-scatter(full_vec3(:,1),full_vec3(:,5),1,'blue');
-scatter(full_vec4(:,1),full_vec4(:,5),1,'yellow');
-scatter(full_vec5(:,1),full_vec5(:,5),1,'cyan');
-scatter(full_vec6(:,1),full_vec6(:,5),1,'magenta');
-
-figure('Name','var vs wl')
-scatter(full_vec1(:,2),full_vec1(:,3),1,'red');
-hold on
-scatter(full_vec2(:,2),full_vec2(:,3),1,'green');
-scatter(full_vec3(:,2),full_vec3(:,3),1,'blue');
-scatter(full_vec4(:,2),full_vec4(:,3),1,'yellow');
-scatter(full_vec5(:,2),full_vec5(:,3),1,'cyan');
-scatter(full_vec6(:,2),full_vec6(:,3),1,'magenta');
-
-figure('Name','var vs mav')
-scatter(full_vec1(:,2),full_vec1(:,4),1,'red');
-hold on
-scatter(full_vec2(:,2),full_vec2(:,4),1,'green');
-scatter(full_vec3(:,2),full_vec3(:,4),1,'blue');
-scatter(full_vec4(:,2),full_vec4(:,4),1,'yellow');
-scatter(full_vec5(:,2),full_vec5(:,4),1,'cyan');
-scatter(full_vec6(:,2),full_vec6(:,4),1,'magenta');
-
-figure('Name','var vs zc')
-scatter(full_vec1(:,2),full_vec1(:,5),1,'red');
-hold on
-scatter(full_vec2(:,2),full_vec2(:,5),1,'green');
-scatter(full_vec3(:,2),full_vec3(:,5),1,'blue');
-scatter(full_vec4(:,2),full_vec4(:,5),1,'yellow');
-scatter(full_vec5(:,2),full_vec5(:,5),1,'cyan');
-scatter(full_vec6(:,2),full_vec6(:,5),1,'magenta');
-
-figure('Name','wl vs mav')
-scatter(full_vec1(:,3),full_vec1(:,4),1,'red');
-hold on
-scatter(full_vec2(:,3),full_vec2(:,4),1,'green');
-scatter(full_vec3(:,3),full_vec3(:,4),1,'blue');
-scatter(full_vec4(:,3),full_vec4(:,4),1,'yellow');
-scatter(full_vec5(:,3),full_vec5(:,4),1,'cyan');
-scatter(full_vec6(:,3),full_vec6(:,4),1,'magenta');
-
-figure('Name','wl vs zc')
-scatter(full_vec1(:,2),full_vec1(:,5),1,'red');
-hold on
-scatter(full_vec2(:,3),full_vec2(:,5),1,'green');
-scatter(full_vec3(:,3),full_vec3(:,5),1,'blue');
-scatter(full_vec4(:,3),full_vec4(:,5),1,'yellow');
-scatter(full_vec5(:,3),full_vec5(:,5),1,'cyan');
-scatter(full_vec6(:,3),full_vec6(:,5),1,'magenta');
-
-figure('Name','mav vs zc')
-scatter(full_vec1(:,4),full_vec1(:,5),1,'red');
-hold on
-scatter(full_vec2(:,4),full_vec2(:,5),1,'green');
-scatter(full_vec3(:,4),full_vec3(:,5),1,'blue');
-scatter(full_vec4(:,4),full_vec4(:,5),1,'yellow');
-scatter(full_vec5(:,4),full_vec5(:,5),1,'cyan');
-scatter(full_vec6(:,4),full_vec6(:,5),1,'magenta');
+plot(rms(test1(129:192,:)))
+plot(rms(test3(129:192,:)))
+plot(rms(test4(129:192,:)))
+plot(rms(test5(129:192,:)))
 
 
 
 
 
+%create table - movement direction, test 1, test 2, test 3, test 4, test 5

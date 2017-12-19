@@ -7,7 +7,7 @@ calc = zeros(numchannels,1);
 
 for i = 1:numchannels
    
-   calc(i,1) = log(var(x(i,:)));
+   calc(i,1) = var(x(i,:));
    
 end
 end

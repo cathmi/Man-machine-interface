@@ -2,11 +2,11 @@
 
 function result = mean_adjust(x)
 
-noofchannels = size(x(:,1));
+noofchannels = 192;
 result = zeros(size(x));
-means = zeros(noofchannels);
+means = zeros(noofchannels,1);
 for i = 1:noofchannels
-    means(i,1) = mean(x(i,:));
+    means(i) = mean(x(i,:));
     
     result(i,:) = x(i,:) - means(i);
     
